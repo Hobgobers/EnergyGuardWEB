@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container form-container">
+        <h2>CADASTRO:</h2>
+        <form id="form-cadastro">
+            <label for="cad-usuario">Usuário:</label>
+            <input type="text" id="cad-usuario" autocomplete="username" required>
+            
+            <label for="cad-senha">Senha:</label>
+            <input type="password" id="cad-senha" autocomplete="new-password" required>
+            
+            <p id="msg-cadastro" class="msg"></p>
+            <div class="botoes-form">
+                <button type="submit" class="btn">CADASTRAR</button>
+                <a href="index.html" class="btn btn-voltar">VOLTAR</a>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Real/Watts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container form-container">
+        <h2>Conversor Real/Watts</h2>
+        <form id="form-conversor">
+            <label for="conv-valor">Digite quanto deseja gastar por mês:</label>
+            <input type="number" id="conv-valor" step="0.01" min="0" required>
+            
+            <p id="resultado-conversor" class="msg">Consumo Ideal: 0</p>
+            <div class="botoes-form">
+                <button type="submit" class="btn">Converter</button>
+                <a href="menu_principal.html" class="btn btn-voltar">VOLTAR</a>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

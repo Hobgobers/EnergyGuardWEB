@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Dispositivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container table-container">
+        <h2>Excluir Dispositivos</h2>
+        
+        <p class="label-selecao">Selecione um dispositivo para excluir:</p>
+        
+        <table id="tabela-deletar">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Consumo</th>
+                    <th>Status</th>
+                    <th>Ação</th> <!-- Coluna conforme wireframe -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas inseridas via JS -->
+            </tbody>
+        </table>
+
+        <div class="acoes-centrais">
+            <button onclick="deletarDispositivoSelecionado()" class="btn btn-danger">Excluir</button>
+        </div>
+
+        <p id="msg-del" class="msg"></p>
+        
+        <a href="menu_principal.html" class="btn btn-secundario btn-voltar-centralizado">VOLTAR</a>
+    </main>
+    <script src="script.js"></script>
+    <script>carregarTabelaDeletar();</script>
+</body>
+</html>

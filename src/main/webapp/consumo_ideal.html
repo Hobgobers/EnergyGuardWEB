@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo Ideal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container form-container">
+        <h2>Consumo Ideal:</h2>
+        <form id="form-ideal">
+            <label for="meta-valor">Meta em R$:</label>
+            <input type="number" id="meta-valor" step="0.01" min="0.1" required>
+            
+            <p id="res-ideal" class="msg">Resultado: Consumo Atual: 0.0 watts</p>
+            <div class="botoes-form">
+                <button type="submit" class="btn">CALCULAR</button>
+                <a href="menu_principal.html" class="btn btn-voltar">VOLTAR</a>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

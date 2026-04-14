@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container menu-container">
+        <header class="menu-header">
+            <h1>ENERGY GUARD</h1>
+            <button onclick="logout()" class="btn btn-sair">SAIR</button>
+        </header>
+        <div class="grid-menu">
+            <a href="cadastro_dispositivo.html" class="btn-menu">Cadastrar Dispositivos</a>
+            <a href="consumo_total.html" class="btn-menu">Consumo Total</a>
+            <a href="conversor.html" class="btn-menu">Conversor Real/Watts</a>
+            <a href="controlar_dispositivos.html" class="btn-menu">Controlar Dispositivos</a>
+            <a href="consumo_ideal.html" class="btn-menu">Consumo Ideal</a>
+            <a href="deletar_dispositivo.html" class="btn-menu">Deletar Dispositivos</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>verificarLogin();</script>
+</body>
+</html>

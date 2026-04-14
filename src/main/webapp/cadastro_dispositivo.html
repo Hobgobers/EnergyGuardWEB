@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Dispositivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container form-container">
+        <h2>Cadastro de Dispositivos</h2>
+        <form id="form-dispositivo">
+            <label for="disp-nome">NOME DO DISPOSITIVO:</label>
+            <input type="text" id="disp-nome" required>
+            
+            <label for="disp-consumo">CONSUMO DO DISPOSITIVO(EM WATTS):</label>
+            <input type="number" id="disp-consumo" step="0.1" min="0.1" required>
+            
+            <p id="msg-disp" class="msg"></p>
+            <button type="submit" class="btn">FINALIZAR</button>
+        </form>
+        <a href="menu_principal.html" class="btn btn-voltar" style="margin-top:1rem;">VOLTAR</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

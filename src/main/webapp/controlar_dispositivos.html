@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Dispositivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container table-container">
+        <h2>Controle de Dispositivos</h2>
+        
+        <p class="label-selecao">Selecione o dispositivo para controlar:</p>
+        
+        <table id="tabela-controle">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Consumo</th>
+                    <th>Status</th>
+                    <th>Ação</th> <!-- Coluna conforme wireframe -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas inseridas via JS -->
+            </tbody>
+        </table>
+
+        <div class="acoes-centrais">
+            <button onclick="toggleDispositivoSelecionado()" class="btn btn-primario">Ligar/Desligar</button>
+        </div>
+
+        <p id="msg-control" class="msg"></p>
+        
+        <a href="menu_principal.html" class="btn btn-secundario btn-voltar-centralizado">VOLTAR</a>
+    </main>
+    <script src="script.js"></script>
+    <script>carregarTabelaControle();</script>
+</body>
+</html>
