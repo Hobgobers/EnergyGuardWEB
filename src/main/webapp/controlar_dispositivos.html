@@ -9,29 +9,26 @@
 <body>
     <main class="container table-container">
         <h2>Controle de Dispositivos</h2>
-        
-        <p class="label-selecao">Selecione o dispositivo para controlar:</p>
-        
+        <p class="label-selecao">Clique em uma linha para selecionar o dispositivo:</p>
+
         <table id="tabela-controle">
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Consumo</th>
+                    <th>Consumo (W)</th>
                     <th>Status</th>
-                    <th>Ação</th> <!-- Coluna conforme wireframe -->
                 </tr>
             </thead>
             <tbody>
-                <!-- Linhas inseridas via JS -->
+                <!-- Linhas preenchidas via JavaScript -->
             </tbody>
         </table>
 
         <div class="acoes-centrais">
-            <button onclick="toggleDispositivoSelecionado()" class="btn btn-primario">Ligar/Desligar</button>
+            <button id="btn-toggle" class="btn btn-primario">Ligar/Desligar</button>
         </div>
 
         <p id="msg-control" class="msg"></p>
-        
         <a href="menu_principal.html" class="btn btn-secundario btn-voltar-centralizado">VOLTAR</a>
     </main>
     <script src="script.js"></script>

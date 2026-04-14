@@ -38,7 +38,7 @@ public class DispositivoController {
     }
 
     @PutMapping("/{id}/status")
-    public Map<String, Object> alterarStatus(@PathVariable int id, @RequestParam boolean status) {
+    public Map<String, Object> alterarStatus(@PathVariable("id") int id, @RequestParam("status") boolean status) {
         boolean sucesso = service.alternarStatus(id, status);
         Map<String, Object> response = new HashMap<>();
         response.put("sucesso", sucesso);
@@ -47,7 +47,7 @@ public class DispositivoController {
     }
 
     @DeleteMapping("/{id}")
-    public Map<String, Boolean> deletar(@PathVariable int id) {
+    public Map<String, Boolean> deletar(@PathVariable("id") int id) {
         boolean sucesso = service.remover(id);
         Map<String, Boolean> response = new HashMap<>();
         response.put("sucesso", sucesso);
