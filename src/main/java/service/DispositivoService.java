@@ -13,9 +13,7 @@ public class DispositivoService {
     @Autowired
     private DispositivoDAO dao;
 
-    /**
-     * Garante que a tabela de dispositivos exista após a injeção do DAO.
-     */
+    
     @PostConstruct
     public void init() {
     System.out.println("========== " + this.getClass().getSimpleName() + " inicializado ==========");

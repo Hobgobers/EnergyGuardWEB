@@ -4,7 +4,7 @@ public class TesteConexao {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/energyguard_db?useTimezone=true&serverTimezone=UTC";
         String user = "root";
-        String password = "Arkaosbb20032003"; // Substitua pela sua senha real
+        String password = "Arkaosbb20032003"; 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url, user, password);

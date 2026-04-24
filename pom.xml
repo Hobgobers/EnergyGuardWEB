@@ -14,7 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <!-- Definindo versões centrais para manter o controle -->
         <spring.version>6.1.6</spring.version>
         <jackson.version>2.17.0</jackson.version>
         <mysql.version>8.3.0</mysql.version>
@@ -23,7 +22,6 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Web MVC -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -31,14 +29,12 @@
         </dependency>
         
         
-        <!-- Jackson para serialização/desserialização JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
         </dependency>
 
-        <!-- Jakarta Servlet API (Provided pelo Tomcat) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -46,7 +42,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Driver MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -54,9 +49,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Jakarta RESTful WS API (Provided pelo Tomcat se for usar JAX-RS) -->
-        <!-- ATENÇÃO: Se você NÃO estiver usando JAX-RS (@Path, @GET, etc.), remova esta dependência -->
-        <!-- A presença dela pode causar conflitos com o Spring MVC se ambos forem inicializados -->
+        
         
         <dependency>
             <groupId>jakarta.annotation</groupId>

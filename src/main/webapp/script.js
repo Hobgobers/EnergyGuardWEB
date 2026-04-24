@@ -1,4 +1,3 @@
-// EnergyGuard - Script Final (com seleção por linha e botões centrais)
 
 const API_URL = "/EnergyGuard_FINAL/api/dispositivos";
 const API_AUTH_URL = "/EnergyGuard_FINAL/api/auth";
@@ -109,7 +108,6 @@ function carregarTabelaControle() {
 }
 
 function selecionarLinhaControle(tr, id) {
-    // Remove destaque de todas as linhas
     document.querySelectorAll('#tabela-controle tbody tr').forEach(row => row.classList.remove('selected'));
     tr.classList.add('selected');
     dispositivoSelecionadoId = id;
@@ -120,10 +118,10 @@ function toggleDispositivoSelecionado() {
         alert("Selecione um dispositivo clicando na linha.");
         return;
     }
-    // Precisamos saber o status atual para inverter. Vamos buscar da linha selecionada.
+
     const linha = document.querySelector('#tabela-controle tbody tr.selected');
     if (!linha) return;
-    const statusCell = linha.cells[2]; // terceira coluna (status)
+    const statusCell = linha.cells[2];
     const statusTexto = statusCell.innerText.trim();
     const novoStatus = statusTexto === 'DESLIGADO';
     alternarStatus(dispositivoSelecionadoId, novoStatus);
@@ -132,7 +130,7 @@ function toggleDispositivoSelecionado() {
 function alternarStatus(id, novoStatus) {
     fetch(`${API_URL}/${id}/status?status=${novoStatus}`, { method: 'PUT' })
         .then(res => res.json())
-        .then(() => carregarTabelaControle()) // recarrega a tabela
+        .then(() => carregarTabelaControle()) 
         .catch(() => alert('Erro ao alterar status.'));
 }
 

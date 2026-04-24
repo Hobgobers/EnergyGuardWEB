@@ -19,16 +19,13 @@ public class SugestoesController {
     private SugestoesService service;
 
     @Autowired
-    private DispositivoService dispositivoService; // Para pegar a lista atual do banco
+    private DispositivoService dispositivoService; 
 
-    // Endpoint para obter sugestões de economia
-    // POST: http://localhost:8080/EnergyGuard_FINAL/api/sugestoes/analisar
-    // Body JSON: { "consumoIdeal": 500.0 }
+
     @PostMapping("/analisar")
     public Map<String, Object> analisar(@RequestBody Map<String, Double> payload) {
         double consumoIdeal = payload.getOrDefault("consumoIdeal", 0.0);
         
-        // Pega todos os dispositivos atuais do banco
         List<Dispositivo> todosDispositivos = dispositivoService.obterTodos();
         
         double consumoAtual = service.calcularConsumoTotal(todosDispositivos);

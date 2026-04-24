@@ -3,11 +3,11 @@ package model;
 public class Dispositivo {
     private int id;
     private String nome;
-    private double potencia; // No desktop era 'consumo', ajustei para 'potencia' para ficar mais técnico
+    private double potencia; 
     private boolean ligado;
     private String tipo;
 
-    public Dispositivo() {} // Construtor vazio obrigatório para Jackson/Spring
+    public Dispositivo() {} 
 
     public Dispositivo(String nome, double potencia, boolean ligado) {
         this.nome = nome;
@@ -15,7 +15,6 @@ public class Dispositivo {
         this.ligado = ligado;
     }
 
-    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     

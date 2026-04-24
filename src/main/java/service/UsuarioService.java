@@ -12,9 +12,7 @@ public class UsuarioService {
     @Autowired
     private UsuarioDAO dao;
 
-    /**
-     * Garante que a tabela de usuários exista após a injeção do DAO.
-     */
+    
     @PostConstruct
     public void init() {
     System.out.println("========== " + this.getClass().getSimpleName() + " inicializado ==========");

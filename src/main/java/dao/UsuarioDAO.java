@@ -20,7 +20,6 @@ public class UsuarioDAO {
         }
     }
 
-    // Garante que a tabela de usuários exista
     public void criarTabelaSeNaoExistir() {
         String sql = "CREATE TABLE IF NOT EXISTS usuarios (" +
             "id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -52,7 +51,6 @@ public class UsuarioDAO {
     }
 
     public boolean salvar(String usuario, String senha) {
-        // Verifica duplicidade antes
         if (buscarPorUsuario(usuario) != null) {
             return false;
         }
